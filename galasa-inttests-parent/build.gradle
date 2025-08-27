@@ -26,10 +26,6 @@ subprojects {
         version = galasaVersion
     }
 
-    // JDK compatibility
-    sourceCompatibility = galasaSourceCompatibility
-    targetCompatibility = galasaTargetCompatibility
-
  //   ext.isReleaseVersion = false
 
  //   tasks.withType(Sign) {
@@ -41,8 +37,10 @@ subprojects {
     }
 
     java {
-        // withJavadocJar()
-        // withSourcesJar()
+        // JDK compatibility
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(11)
+        }
     }
     
     tasks.withType(Javadoc) {
