@@ -30,7 +30,7 @@ public class DockerLocalJava11Ubuntu extends AbstractDockerUbuntuLocal {
 	@LinuxImage(imageTag = "PRIMARY")
 	public ILinuxImage ecosystemLinuxImage;
 	
-	@JavaUbuntuInstallation(imageTag = "PRIMARY", javaVersion = JavaVersion.v11)
+	@JavaUbuntuInstallation(imageTag = "PRIMARY", javaVersion = JavaVersion.v17)
 	public IJavaUbuntuInstallation java;
 	
 	@LinuxImage(imageTag = "DOCKER", operatingSystem = OperatingSystem.ubuntu, capabilities = {"nonshared"})
