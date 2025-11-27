@@ -140,7 +140,6 @@ function build_obr {
     cd ${BASEDIR}/galasa-inttests-parent/dev.galasa.inttests.obr
 
     context=inttests/galasa-inttests-parent/dev.galasa.inttests.obr
-    bootstrap=https://galasa-ecosystem1.galasa.dev/api/bootstrap
 
     cmd="mvn \
     -Dgalasa.source.repo=https://development.galasa.dev/main/maven-repo/obr \
