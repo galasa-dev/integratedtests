@@ -1,7 +1,7 @@
 plugins {
-    id 'dev.galasa.githash' version '0.46.1' apply false
-    id 'dev.galasa.testcatalog' version '0.46.1' apply false
-    id 'dev.galasa.tests' version '0.46.1' apply false
+    id 'dev.galasa.githash' version '0.47.0' apply false
+    id 'dev.galasa.testcatalog' version '0.47.0' apply false
+    id 'dev.galasa.tests' version '0.47.0' apply false
 }
 
 subprojects {
@@ -84,7 +84,7 @@ subprojects {
  //   }
 
     dependencies {
-        implementation platform('dev.galasa:galasa-bom:0.46.1')
+        implementation platform('dev.galasa:galasa-bom:0.47.0')
 
         compileOnly 'dev.galasa:dev.galasa'
         compileOnly 'dev.galasa:dev.galasa.framework'
