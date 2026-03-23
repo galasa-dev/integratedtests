@@ -12,7 +12,10 @@ import org.apache.commons.logging.Log;
 import com.google.gson.JsonObject;
 
 import dev.galasa.BeforeClass;
+import dev.galasa.ICredentialsKeyStore;
 import dev.galasa.Test;
+import dev.galasa.core.manager.CoreManager;
+import dev.galasa.core.manager.ICoreManager;
 import dev.galasa.core.manager.Logger;
 import dev.galasa.galasaecosystem.IGenericEcosystem;
 import dev.galasa.ipnetwork.ICommandShell;
@@ -22,7 +25,11 @@ public abstract class AbstractDocker {
 	
 	@Logger
 	public Log logger;
+
 	protected ICommandShell shell;
+
+    @CoreManager
+    public ICoreManager coreManager;
 	
 	final static String DOCKER_PORT = "2376";
 
@@ -34,11 +41,17 @@ public abstract class AbstractDocker {
 		getEcosystem().setCpsProperty("docker.engine.DKRTESTENGINE.hostname", dockerHostname);
 		getEcosystem().setCpsProperty("docker.engine.DKRTESTENGINE.port", DOCKER_PORT);
 		getEcosystem().setCpsProperty("docker.engine.DKRTESTENGINE.max.slots", "3");
-
 		// TODO: remove hard coded values
 		getEcosystem().setCpsProperty("docker.default.registries", "GHCR");
 		getEcosystem().setCpsProperty("docker.registry.GHCR.url", "https://ghcr.io");
 		getEcosystem().setCpsProperty("docker.registry.GHCR.busybox.image", "galasa-dev/busybox:1.36.1");
+		
+		// Credentials
+		getEcosystem().setCpsProperty("docker.engine.DKRTESTENGINE.credentials.id", "DOCKER_TLS_CERTS");
+		ICredentialsKeyStore keystoreCreds = (ICredentialsKeyStore) coreManager.getCredentials("DOCKER_TLS_CERTS");
+		getEcosystem().setCredsProperty("secure.credentials.DOCKER_TLS_CERTS.keystore", keystoreCreds.getEncodedKeyStore());
+		getEcosystem().setCredsProperty("secure.credentials.DOCKER_TLS_CERTS.password", keystoreCreds.getKeyStorePassword());
+		getEcosystem().setCredsProperty("secure.credentials.DOCKER_TLS_CERTS.type", keystoreCreds.getKeyStoreType());
 	}
 	
 	@Test
