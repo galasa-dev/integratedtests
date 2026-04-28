@@ -1,21 +1,21 @@
 # Galasa Integration Tests
-This repository contains the integration tests that are used to test Galasa itself. 
+This repository contains the integration tests that are used to test Galasa Managers. Currently, this repository only contains a test for the Docker Manager.
 
 ## Documentation
 
-More information can be found on the [Galasa Homepage](https://galasa.dev). Questions related to the usage of Galasa can be posted on [Spectrum](https://spectrum.chat/galasa?tab=posts).
+More information can be found on the [Galasa Homepage](https://galasa.dev). Questions related to the usage of Galasa can be posted in the [galasa-users channel](https://openmainframeproject.slack.com/archives/C05TCCQDE65) on the Open Mainframe Project Slack workspace.
 
 ## Where can I get the latest release?
 
-Find out how to install the Galasa Eclipse plug-in from our [Installing the Galasa plug-in](https://galasa.dev/docs/getting-started/installing) documentation.
+Find out how to install Galasa from our [Installing the Galasa CLI](https://galasa.dev/docs/cli-command-reference/installing-cli-tool/) documentation.
 
 Other repositories are available via [GitHub](https://github.com/galasa-dev). 
 
 ## Contributing
 
-If you are interested in the development of Galasa, take a look at the documentation and feel free to post a question on [Spectrum](https://spectrum.chat/galasa?tab=posts) or raise new ideas / features / bugs etc. as issues on [GitHub](https://github.com/galasa-dev/projectmanagement).
+If you are interested in the development of Galasa, take a look at the documentation and feel free to ask a question in the [galasa-users channel](https://openmainframeproject.slack.com/archives/C05TCCQDE65) on the Open Mainframe Project Slack workspace, or raise new ideas/features/bugs as Issues on [GitHub](https://github.com/galasa-dev/projectmanagement).
 
-Take a look at the [contribution guidelines](https://github.com/galasa-dev/projectmanagement/blob/main/contributing.md).
+Take a look at the [contribution guidelines](https://github.com/galasa-dev/galasa/blob/main/CONTRIBUTING.md).
 
 ## License
 
