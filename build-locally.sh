@@ -156,3 +156,5 @@ function build_obr {
 mkdir -p $BASEDIR/temp
 gradle_build
 build_obr
+
+${BASEDIR}/detect-secrets.sh
